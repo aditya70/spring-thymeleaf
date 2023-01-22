@@ -24,7 +24,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @Configuration
 @PropertySource("classpath:config.properties")
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = { "my.project.thymeleaf.core.data", "my.project.simpleusers.core.data" })
+@EnableJpaRepositories(basePackages = { "my.project.thymeleaf.core.data", "edu.asu.diging.simpleusers.core.data" })
 public class PersistenceConfig {
 
     @Autowired
@@ -45,7 +45,7 @@ public class PersistenceConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan(new String[] { "my.project.thymeleaf.core.model", "my.project.simpleusers.core.model" });
+        em.setPackagesToScan(new String[] { "my.project.thymeleaf.core.model", "edu.asu.diging.simpleusers.core.model" });
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);

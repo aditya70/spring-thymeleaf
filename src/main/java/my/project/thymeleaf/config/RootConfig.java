@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration
 @EnableWebMvc
 @EnableAspectJAutoProxy
-@ComponentScan({"my.project.thymeleaf", "my.project.simpleusers.core"})
+@ComponentScan({"my.project.thymeleaf", "edu.asu.diging.simpleusers.core"})
 public class RootConfig {
 
     @Bean
